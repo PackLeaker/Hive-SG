@@ -1,0 +1,18 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.hive.sg.cache_cow": {
+            "states": {
+                "default": {
+                    "animations": ["base_pose"],
+                    "particle_effects": [
+                        {
+                            "effect": "green",
+                            "locator": "head"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

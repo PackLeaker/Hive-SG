@@ -1,0 +1,44 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.hive.sg.launchpad": {
+            "states": {
+                "ambient": {
+                    "animations": ["base_pose"],
+                    "transitions": [
+                        {
+                            "launch": "query.is_baby"
+                        },
+                        {
+                            "charged": "query.distance_from_camera <= 8"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "charged": {
+                    "animations": ["charged"],
+                    "transitions": [
+                        {
+                            "launch": "query.is_baby"
+                        },
+                        {
+                            "ambient": "query.distance_from_camera > 8"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "launch": {
+                    "animations": ["launch"],
+                    "transitions": [
+                        {
+                            "ambient": "!query.is_baby && query.distance_from_camera > 8"
+                        },
+                        {
+                            "charged": "!query.is_baby && query.distance_from_camera <= 8"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

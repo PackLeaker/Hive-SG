@@ -1,0 +1,31 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.hive.sg.supply_crate": {
+            "states": {
+                "closed": {
+                    "animations": ["closed"],
+                    "transitions": [
+                        {
+                            "open": "query.variant == 1"
+                        },
+                        {
+                            "opened": "query.variant == 2"
+                        }
+                    ]
+                },
+                "open": {
+                    "animations": ["open"],
+                    "transitions": [
+                        {
+                            "opened": "query.variant == 2"
+                        }
+                    ]
+                },
+                "opened": {
+                    "animations": ["opened"]
+                }
+            }
+        }
+    }
+}

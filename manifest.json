@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "HiveSG",
+        "name": "HiveSG",
+        "uuid": "0b010fde-93c9-4759-b0b6-cc077899030e",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 14, 0]
+    },
+    "modules": [
+        {
+            "description": "HiveSG",
+            "type": "resources",
+            "uuid": "47b0daad-879e-40ad-917d-648bdc641aa6",
+            "version": [1, 0, 0]
+        }
+    ]
+}
